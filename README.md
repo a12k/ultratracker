@@ -10,4 +10,6 @@ git clone https://github.com/a12k/ultratracker.git
 npm install
 
 npm start
+
+go to: localhost:3000
 ```
