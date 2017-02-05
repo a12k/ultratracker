@@ -9,7 +9,8 @@ router.post('/', function(req, res, next) {
       racetitle: json.racetitle, 
       spots: json.spots, 
       closes: json.closes, 
-      location: json.location 
+      location: json.location,
+      date: json.eventdate
     });
   }, function(error) {
     res.render('result', { title: 'ERROR' });
