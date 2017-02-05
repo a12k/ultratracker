@@ -1,8 +1,15 @@
 extends index
 
-append content
-  h1= racetitle
-  p #{location}
-  if spots
-    p There are #{spots}
-  p #{closes}
+block content
+  div#wrapper.divided
+    section.banner.style1.orient-left.content-align-left.image-position-right.fullscreen.onload-image-fade-in.onload-content-fade-right
+      div.content
+        h1= racetitle
+        p.major #{location}
+        if spots
+          p There are #{spots}
+        else
+          p Data on remaining spots not available
+        p #{closes}
+      div.image
+        img(src="images/banner.jpg" alt="")

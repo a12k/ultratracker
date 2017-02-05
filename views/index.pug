@@ -1,6 +1,15 @@
 extends layout
 
 block content
-  h1= title
-  form(method='POST' action='/search')
-    input#race-id.form-control(type='text', placeholder='enter race id ex. 43358', name='uid')
+  div#wrapper.divided
+    section.banner.style1.orient-left.content-align-left.image-position-right.fullscreen.onload-image-fade-in.onload-content-fade-right
+      div.content
+        h1= title
+        p.major= 'Enter ID from Ultra Signup Race'
+        ul.actions.vertical
+          form(method='POST' action='/search')
+            input#race-id.form-control(type='text', placeholder='enter race id ex. 43358', name='uid')
+            br
+            button.big.wide.smooth-scroll-middle Find your Race
+      div.image
+        img(src="images/banner.jpg" alt="")
