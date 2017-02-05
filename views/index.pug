@@ -2,5 +2,5 @@ extends layout
 
 block content
   h1= title
-  p There are #{spots}
-  p #{closes}
+  form(method='POST' action='/search')
+    input#race-id.form-control(type='text', placeholder='enter race id ex. 43358', name='uid')
