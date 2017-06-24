@@ -3,7 +3,7 @@ sudo: required
 services:
   - docker
 
-languge: node_js
+language: node_js
 
 after_success:
   — sh .travis/deploy_dockerhub.sh
