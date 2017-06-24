@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/a12k/ultratracker.svg?branch=master)](https://travis-ci.org/a12k/ultratracker)
+
 # ultratracker
 tracking spots left in races listed on ultrasignup
 
