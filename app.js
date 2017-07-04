@@ -7,15 +7,16 @@ let bodyParser = require('body-parser');
 
 let index = require('./routes/index');
 let search = require('./routes/search');
+let api = require('./routes/api');
 
 let app = express();
+let router = express.Router();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
 
-// uncomment after placing your favicon in /public
-//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -24,6 +25,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/search', search);
+app.use('/api/v0', api);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
