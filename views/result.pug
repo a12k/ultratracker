@@ -4,14 +4,17 @@ block content
   div#wrapper.divided
     section.banner.style1.orient-left.content-align-left.image-position-right.fullscreen.onload-image-fade-in.onload-content-fade-right
       div.content
-        h1= racetitle
-        p.major #{date}
-        p.major #{location}
-        if spots
-          p There are #{spots}
-        else
-          p Data on remaining spots not available
-        p #{closes}
+        if !racetitle
+          p This event doesn't appear to exist :(
+        else 
+          h1= racetitle
+          p.major #{date}
+          p.major #{location}
+          if spots
+            p There are #{spots}
+          else
+            p Data on remaining spots not available
+          p #{closes}
         form(method='GET' action='/')
           button.big.wide.smooth-scroll-middle Back
       div.image
