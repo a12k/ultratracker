@@ -18,12 +18,16 @@ npm install
 npm start
 
 go to: localhost:3000
+
 ```
 When running locally, POST request to: 
 
 ```
 localhost:3000/api/v0/:uid
-
+```
+or to the Heroku example app:
+```
+ultratracker.herokuapp.com/api/v0/:uid
 ```
 
 where `:uid` is a race ID will return API data in json format. 
