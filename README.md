@@ -11,9 +11,19 @@ on UltraSignup.com, so I don't have to click through on many races every time. :
 ```
 git clone https://github.com/a12k/ultratracker.git
 
+cd ultratracker
+
 npm install
 
 npm start
 
 go to: localhost:3000
 ```
+When running locally, POST request to: 
+
+```
+localhost:3000/api/v0/:uid
+
+```
+
+where `:uid` is a race ID will return API data in json format. 
